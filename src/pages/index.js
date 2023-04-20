@@ -168,11 +168,14 @@ export default function Home() {
 
   return (
     <>
-      <Navbar>p</Navbar>
+      <Navbar></Navbar>
       <main className={styles.main}>
         <canvas id="canvas"></canvas>
         <Model></Model>
       </main>
+      <div className={styles.particle}></div>
+      <div className={styles.particle}></div>
+      <div className={styles.particle}></div>
     </>
   )
 }

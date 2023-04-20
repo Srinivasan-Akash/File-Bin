@@ -13,7 +13,6 @@
   justify-content: center;
   flex-direction: column;
   box-shadow: 15px 10px 10px 10px #000;
-  transform: rotate(5deg);
 }
 
 .glass h1 {
