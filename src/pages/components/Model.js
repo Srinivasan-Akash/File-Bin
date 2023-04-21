@@ -44,10 +44,10 @@ export default function Model() {
     } else {
       console.log(`File uploaded: ${data.Key}`);
       const downloadLinkInMyWebPage = `${window.location.origin}/api/download/${randomName}`;
-      alert(downloadLinkInMyWebPage)
-      linkOutput.current.value = downloadLinkInMyWebPage
       setUploading(false)
       setUploadProgress(100)
+      // alert(downloadLinkInMyWebPage)
+      linkOutput.current.value = downloadLinkInMyWebPage
     }
   };
 
@@ -60,14 +60,14 @@ export default function Model() {
   }
 
   return (
-    <section className={styles.glass}>
+    <section className={styles.glass} id="mainDiv">
       <h1>Share Family Memories Easily</h1>
       <div className={styles.btns}>
-        <input type="text" readOnly={true} ref={linkOutput} contentEditable="false" value="Shareable URL Goes Here"/>
-        <span onClick={copyToClipBoard}>Copy</span>
+        <input type="text" id="shareAbleLink" readOnly={true} ref={linkOutput} contentEditable="false" defaultValue="Shareable URL Goes Here"/>
+        <span id="clipboard" onClick={copyToClipBoard}>Copy</span>
         <div>
-          <input type="number" min={0} placeholder="eg:- (91+ 7676856815)"/>
-          <button onClick={openFileUploadForFolder}>
+          <input id="number" type="number" min={0} placeholder="eg:- (91+ 7676856815)"/>
+          <button id="uploadContent" onClick={openFileUploadForFolder}>
             {uploading ? (
               <>
                 {uploadProgress === -1 ? (

@@ -119,13 +119,13 @@ export default function Navbar() {
         </svg>
       </div>
 
-      <div className={styles.hamburger} onClick={handleClick}>
+      <div id="hamburger" className={styles.hamburger} onClick={handleClick}>
         <span className={isOpen ? styles.bar1open : styles.bar1}></span>
         <span className={isOpen ? styles.bar2open : styles.bar2}></span>
         <span className={isOpen ? styles.bar3open : styles.bar3}></span>
       </div>
 
-      <div className={styles.slideNav}>
+      <div id="sideNav" className={styles.slideNav}>
         <ul>
           <li>Download Content</li>
           <li>Register As User</li>
