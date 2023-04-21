@@ -29,13 +29,16 @@
   margin-top: .5em;
 }
 
-.btns button {
+.btns button, .btns input {
   width: 80%;
   margin-top: .5em;
   padding: 1em;
   box-shadow: 2px 1px 1px 1px #000;
   border-radius: 20px 0 20px 0;
   font-size: 1em;
+}
+
+.btns button {
   cursor: pointer;
 }
 
@@ -50,75 +53,22 @@
 .btns div button:nth-child(2) {
   border-radius: 0 20px 0 20px;
 }
-/* .card {
-  width: 50vw;
-  height: 80vh;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  border-radius: 20px;
-  background-color: rgba(255, 255, 255, 0.45) !important;
-  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(15px);
+
+.btns input {
+  outline: none;
+}
+
+.btns {
+  position: relative;
+}
+
+.btns span {
   position: absolute;
-  top: 50%;
-  box-shadow: 0px 0px 10px 10px #ffffff98;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 99999;
-  border-radius: 150px 0 150px 0;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  
+  top: 8%;
+  right: 10%;
+  padding: 1em 2em;
+  background-color: #000;
+  color: #fff;
+  border-radius: 0 0 20px 0;
+  cursor: pointer;
 }
-
-@keyframes rotate {
-  100% {
-    transform: rotate(1turn);
-  }
-}
-
-.card::before {
-  content: "";
-  z-index: -2;
-  position: absolute;
-  z-index: -2;
-  left: -50%;
-  top: -50%;
-  width: 200%;
-  height: 200%;
-  background-color: #399953;
-  background-repeat: no-repeat;
-  background-size: 50% 50%, 50% 50%;
-  background-position: 0 0, 100% 0, 100% 100%, 0 100%;
-  background-image: repeating-linear-gradient(
-    45deg,
-    black,
-    black 10px,
-    rgba(255, 255, 255, 0.45) 10px,
-    rgba(255, 255, 255, 0.45) 20px
-  );
-  border-radius: 150px 0 150px 0;
-
-  -webkit-animation: rotate 4s linear infinite;
-  animation: rotate 4s linear infinite;
-}
-.card::after {
-  content: "";
-  position: absolute;
-  z-index: -2;
-
-  z-index: -1;
-  left: 6px;
-  top: 6px;
-  width: calc(100% - 12px);
-  height: calc(100% - 12px);
-  background: white;
-  border-radius: 150px 0 150px 0;
-}
-
-
-.card h1 {
-    font-size: 1.8em;
-    font-family: sans-serif;
-} */

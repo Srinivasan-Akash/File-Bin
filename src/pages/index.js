@@ -36,7 +36,7 @@ export default function Home() {
           if (useGrid) {
             createGrid();
           }
-          populateCanvas(numberToShow * 10);
+          populateCanvas(numberToShow * 12.5);
           canvas.classList.add('ready');
           return render();
         };

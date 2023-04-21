@@ -1,0 +1,16 @@
+.shareUrlPopupContainer {
+    width: 70vw;
+    height: 70vh;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(to bottom right, rgb(0, 0, 0), rgb(0, 0, 0));
+    backdrop-filter: blur(10px);
+    border-radius: 50px 0 50px 0;
+    -webkit-backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
