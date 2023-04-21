@@ -188,9 +188,7 @@ export default function Home() {
       <NoSSR>
       <Joyride continuous hideCloseButton showProgress showSkipButton scrollToFirstStep steps={steps}></Joyride>
       </NoSSR>
-      <div className={styles.particle}></div>
-      <div className={styles.particle}></div>
-      <div className={styles.particle}></div>
+      
     </>
   )
 }

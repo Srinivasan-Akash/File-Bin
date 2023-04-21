@@ -16,12 +16,19 @@ body {
   --shadows3: 5px 5px white;
 }
 
+
 body {
-  background:  rgb(2, 2, 37) !important;
+  background: rgb(2, 2, 37) !important;
+  /* background:  url('https://img.freepik.com/premium-photo/nebula-interstellar-clouds-panoramic-view-with-female-person-flying-towards-light_645882-7271.jpg?size=626&ext=jpg&uid=R97630695&ga=GA1.2.985748327.1679913845&semt=ais') !important; */
+  /* background-size: cover !important; */
   margin: 0;
   width: 100vw;
   height: 100vh;
   animation: aura 15s ease-in-out infinite alternate;
+  /* background-image: linear-gradient(to top right, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.763) 50%, rgba(0, 0, 0, 0.769) 0%);
+  background-blend-mode: multiply;
+  mix-blend-mode: multiply; */
+  /* TODO: SHow Indra Tej*/
 }
 
 
