@@ -43,7 +43,7 @@ export default function Model() {
       setUploading(false);
     } else {
       console.log(`File uploaded: ${data.Key}`);
-      const downloadLinkInMyWebPage = `${window.location.origin}/api/download/${randomName}`;
+      const downloadLinkInMyWebPage = `${window.location.origin}/download/${randomName}`;
       setUploading(false)
       setUploadProgress(100)
       // alert(downloadLinkInMyWebPage)
