@@ -8,7 +8,7 @@ export default function Home() {
     (function() {
       // Variables
       let Photo, addListeners, canvas, createGrid, ctx, gridItem, grids, height, img, imgInfo, imgSrc, imgs, init, magnet, mouse, populateCanvas, render, resizeCanvas, rotateAndPaintImage, updateMouse, useGrid, width;   
-      let images = ["https://images.pexels.com/photos/5710152/pexels-photo-5710152.jpeg?auto=compress&cs=tinysrgb&w=400", "https://media.gettyimages.com/id/1141544328/photo/two-children-running-up-steps-on-the-trail-in-abel-tasman-national-park.jpg?s=612x612&w=0&k=20&c=oQDCMzmIlYUmwdIgN-7mtR6kup7HA9F1Hnt-rxlY_24=", "https://images.pexels.com/photos/8848775/pexels-photo-8848775.jpeg?auto=compress&cs=tinysrgb&w=600", "https://images.pexels.com/photos/4554382/pexels-photo-4554382.jpeg?auto=compress&cs=tinysrgb&w=600"];
+      let images = ["https://cdn.discordapp.com/attachments/1096184493167104150/1098939363863310346/3a311286-10b5-4dbf-8b0b-55de773c3a15.jpg"];
       canvas = document.getElementById('canvas');   
       ctx = canvas.getContext('2d');    
       width = canvas.width = window.innerWidth;
