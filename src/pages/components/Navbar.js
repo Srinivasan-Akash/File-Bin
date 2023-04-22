@@ -11,7 +11,7 @@ export default function Navbar() {
   }
 
   function layoutShift() {
-    const mainScreen = document.querySelector(".Home_main__EtNt2");
+    const mainScreen = document.querySelector(".Home_main__EtNt2") || document.querySelector(".Downloads_container__dN6bm");
     const slideBar = document.querySelector(".Navbar_slideNav__LQWI7");
 
     mainScreen.style.transition = "all .5s ease";
@@ -72,7 +72,8 @@ export default function Navbar() {
   }
 
   function reset() {
-    const mainScreen = document.querySelector(".Home_main__EtNt2");
+    const mainScreen = document.querySelector(".Home_main__EtNt2") || document.querySelector(".Downloads_container__dN6bm");
+
     const slideBar = document.querySelector(".Navbar_slideNav__LQWI7");
 
     mainScreen.style.transform =
