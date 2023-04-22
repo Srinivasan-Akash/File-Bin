@@ -1,12 +1,23 @@
 import { useRouter } from "next/router";
 import Navbar from "../components/Navbar";
 import styles from "@/styles/Downloads.module.css";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { downloadFile } from "../lib/supabaseClient";
 
 export default function download() {
   const router = useRouter();
   const { id } = router.query;
+  const [downloadUrl, setDownloadUrl] = useState(null);
+
+
   useEffect(() => {
+    async function fetchDownloadUrl() {
+      if (id) {
+        const url = await downloadFile(id);
+        setDownloadUrl(url);
+      }
+    }
+    fetchDownloadUrl();
     (function() {
       // Variables
       let Photo, addListeners, canvas, createGrid, ctx, gridItem, grids, height, img, imgInfo, imgSrc, imgs, init, magnet, mouse, populateCanvas, render, resizeCanvas, rotateAndPaintImage, updateMouse, useGrid, width;   
@@ -164,8 +175,8 @@ export default function download() {
         return requestAnimationFrame(render);
       };
       init();
-    }).call(this);        
-  }, [])
+    }).call(this);    
+  }, [id])
   return (
     <div>
       <Navbar></Navbar>
@@ -173,7 +184,14 @@ export default function download() {
         <canvas id="canvas" className={styles.canvas}></canvas>
         <main className={styles.fileInfo}></main>
         <main className={styles.download}>
-          <h1>Download Files</h1>
+          <h1>{id}</h1>
+          {downloadUrl !== null ? (
+            <a href={downloadUrl} download={id}>
+              <button>Download</button>
+            </a>
+          ) : (
+            <p>Loading...</p>
+          )}
         </main>
       </div>
       <div className={styles.overlay}></div>
