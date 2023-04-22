@@ -1,92 +1,51 @@
-import React from "react";
-import styles from "@/styles/404.module.css";
-import Image from "next/image";
-import { useEffect } from "react";
+import React from "react"
+import styles from "@/styles/404.module.css"
+import Image from "next/image"
+import { useEffect } from "react"
 
 export default function NotFound() {
+  const [wallBgListItems, tvGlassVintageList] = [new Array(), new Array()]
+
+  for (let i = 0; i < 40; i++) wallBgListItems.push(<li key={i}></li>)
+  for (let i = 0; i < 25; i++) tvGlassVintageList.push(<li key={i}></li>)
   useEffect(() => {
-    var Application = ( function () {
-      var canvas;
-      var ctx;
-      var imgData;
-      var pix;
-      var flickerInterval;
+    let Application = ( function () {
+      let canvas, ctx, imgData, pix, flickerInterval
+
+      let init = function () {
+          canvas = document.getElementById('canvas')
+          ctx = canvas.getContext('2d')
+          ctx.fillStyle = 'white'
+          ctx.fillRect(0, 0, canvas.width, canvas.height)
+          ctx.fill()
+          imgData = ctx.getImageData(0, 0, canvas.width, canvas.height)
+          pix = imgData.data
+          flickerInterval = setInterval(flickering, 30)
+      }
   
-      var init = function () {
-          canvas = document.getElementById('canvas');
-          ctx = canvas.getContext('2d');
-          ctx.fillStyle = 'white';
-          ctx.fillRect(0, 0, canvas.width, canvas.height);
-          ctx.fill();
-          imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
-          pix = imgData.data;
-          flickerInterval = setInterval(flickering, 30);
-      };
-  
-      var flickering = function () {
-          for (var i = 0; i < pix.length; i += 4) {
-              var color = (Math.random() * 255) + 50;
-              pix[i] = color;
-              pix[i + 1] = color;
-              pix[i + 2] = color;
+      let flickering = function () {
+          for (let i = 0; i < pix.length; i += 4) {
+              let color = (Math.random() * 255) + 50
+              pix[i] = color
+              pix[i + 1] = color
+              pix[i + 2] = color
           }
-          ctx.putImageData(imgData, 0, 0);
-      };
+          ctx.putImageData(imgData, 0, 0)
+      }
   
       return {
           init: init
-      };
-  }());
+      }
+  }())
   
-  Application.init();
+  Application.init()
   }, [])
   
   return (
     <div className={styles.page}>
       <div className={styles["wall-bg"]}>
         <ul>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
+          {wallBgListItems}
         </ul>
         <div className={styles["wall-poster"]}>
           <h1>
@@ -155,22 +114,7 @@ export default function NotFound() {
           <div className={styles["tv-right"]}></div>
           <div className={styles["tv-bottom"]}>
             <ul>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
+              {wallBgListItems}
             </ul>
             <i></i>
           </div>
@@ -197,31 +141,7 @@ export default function NotFound() {
                     </div>
                     <div className={styles["tv-glass-vintage"]}>
                       <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
+                        {tvGlassVintageList}
                       </ul>
 
                       <i className={styles["tv-noise"]}></i>
@@ -361,5 +281,5 @@ export default function NotFound() {
         </div>
       </div>
     </div>
-  );
+  )
 }

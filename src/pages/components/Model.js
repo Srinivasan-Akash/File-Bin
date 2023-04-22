@@ -48,7 +48,6 @@ export default function Model() {
       const downloadLinkInMyWebPage = `${window.location.origin}/download/${randomName}`;
       setUploading(false);
       setUploadProgress(100);
-      // alert(downloadLinkInMyWebPage)
       linkOutput.current.value = downloadLinkInMyWebPage;
     }
   };
