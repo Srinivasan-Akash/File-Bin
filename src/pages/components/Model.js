@@ -13,7 +13,7 @@ export default function Model() {
 
   const openFileUploadForFolder = () => {
     if(!phoneNumber.current.value) alert("Please Enter A Phone Number So That You/Your Friend Can Get An OTP For Security Reasons")
-    folderUpload.current.click();
+    else folderUpload.current.click();
   };
 
   const handleFolderUpload = async (event) => {
