@@ -176,6 +176,7 @@
   border: 1px solid #ccc;
   border-radius: 8px;
   outline: none;
+  box-shadow: 2px 1px 1px 1px #000;
 }
 
 .OTPform input[type="text"]:focus {
