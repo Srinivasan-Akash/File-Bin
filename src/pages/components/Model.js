@@ -83,6 +83,7 @@ export default function Model() {
             ref={phoneNumber}
             min={0}
             placeholder="eg:- (91+ 7676856815)"
+            webkitdirectory directory multiple
           />
           <button id="uploadContent" onClick={openFileUploadForFolder}>
             {uploading ? (
