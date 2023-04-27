@@ -2,8 +2,11 @@
 A basic project in next.js and supabase where people can upload their files with phone number and can get a shareable link. Which they can share to thier friends who can further scan for viruses in the browser itself and download those files. ALso my webapp g-zip's & un-zip's during upload and download
 ***NOTE That I need To develop OTP and Scan for Viruses Functionality***
 
-## 👉 LIVE DEMO:  https://file-bin-akash.vercel.app/
+## 👉 LIVE DEMO
 https://user-images.githubusercontent.com/108281031/234853602-2d4cbd2b-b376-41b0-9bc0-2593236fda5f.mp4
+
+## 404 Page
+https://user-images.githubusercontent.com/108281031/234856635-a2796efc-e69f-4719-9efe-9a48ddc3f4e5.mp4
 
 ## Download Page with more Files
 https://user-images.githubusercontent.com/108281031/234853909-4f525e84-eb3e-4053-8113-1862d936c610.mp4
